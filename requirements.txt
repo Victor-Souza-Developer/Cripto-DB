@@ -1,1 +1,7 @@
-# To ensure app dependencies are ported from your virtual environment/host machine into your container, run 'pip freeze > requirements.txt' in the terminal to overwrite this file
+# To ensure app dependencies are ported from your virtual environment/host machine into your container, run 'pip freeze > requirements.txt' in the terminal to overwrite this filstreamlit
+pandas
+plotly
+psycopg2-binary
+requests
+python-dotenv
+streamlit-autorefresh
