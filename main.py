@@ -1,12 +1,9 @@
-from src.infra.database.conections import get_connection
+from src.main.caller import Caller
 
 
 def main():
-    connection = get_connection()
-
-    print("Conectado com sucesso ao PostgreSQL")
-
-    connection.close()
+    caller = Caller()
+    caller.run()
 
 
 if __name__ == "__main__":

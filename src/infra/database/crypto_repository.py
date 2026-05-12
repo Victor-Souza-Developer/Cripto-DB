@@ -1,11 +1,7 @@
-from src.infra.database.base_repository import BaseRepository
+from src.infra.database.conections import get_connection
 
 
 class CryptoRepository:
-
-    def __init__(self):
-        self.database = BaseRepository()
-
 
     def save(
         self,
@@ -18,6 +14,9 @@ class CryptoRepository:
         price_change_percentage_24h: float,
         last_updated
     ):
+        connection = get_connection()
+        cursor = connection.cursor()
+
         query = """
             INSERT INTO crypto_market_history (
                 name,
@@ -43,6 +42,11 @@ class CryptoRepository:
             last_updated
         )
 
-        self.database.insert(query, params)
+        cursor.execute(query, params)
+
+        connection.commit()
+
+        cursor.close()
+        connection.close()
 
         print("Cripto salva com sucesso!")

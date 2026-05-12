@@ -1,9 +1,12 @@
+from src.utils.env import Env
 import requests
+
 
 
 class CoinGeckoClient:
 
-    BASE_URL = "https://api.coingecko.com/api/v3"
+    def __init__(self):
+        self.BASE_URL = Env.BASE_URL
 
 
     def get_market_data(self):
