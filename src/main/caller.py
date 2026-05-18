@@ -27,3 +27,5 @@ class Caller:
                 price_change_percentage_24h=item["price_change_percentage_24h"],
                 last_updated=item["last_updated"]
             )
+
+            #modificção teste 
