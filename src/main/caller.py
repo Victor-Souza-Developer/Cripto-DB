@@ -28,4 +28,3 @@ class Caller:
                 last_updated=item["last_updated"]
             )
 
-            #modificção teste 
