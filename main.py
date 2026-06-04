@@ -8,7 +8,7 @@ def main():
         print("Iniciando coleta...")
         caller.run()
         print("Próxima coleta em 30 minutos...")
-        time.sleep(1800)
+        time.sleep(86400)
 
 if __name__ == "__main__":
     main()
